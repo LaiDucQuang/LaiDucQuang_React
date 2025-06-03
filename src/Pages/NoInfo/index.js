@@ -1,7 +1,7 @@
 function NoInfo(){
     return(
         <>
-        <h1>No Information siuuu</h1>
+        <h1>No Information</h1>
         </>
     )
 }
