@@ -1,0 +1,14 @@
+.category{
+    padding: 20px;
+    &__item{
+        background-color: #fff;
+        padding: 20px;
+        font-style: italic;
+        font-size: 15px;
+        font-weight: 400;
+        color: darkslateblue;
+    }
+    :hover{
+        cursor: pointer;
+    }
+}
