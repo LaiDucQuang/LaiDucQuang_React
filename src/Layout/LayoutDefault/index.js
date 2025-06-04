@@ -1,4 +1,4 @@
-import { Layout } from 'antd';
+import { Avatar, Layout } from 'antd';
 import "./LayoutDefault.scss";
 import Logo from "../../images/logo.png";
 import LogoFold from "../../images/logo-fold.png";
@@ -9,6 +9,7 @@ import Notify from '../../components/Notify/index.js';
 import Sider from 'antd/es/layout/Sider.js';
 import AppSider from './AppSider.jsx';
 import UseCollapse from '../../Hooks/UseCollapse.js';
+import avatar from "../../images/avatar.jpg"
 
 const { Footer,Content } = Layout;
 
@@ -29,15 +30,16 @@ function LayoutDefault() {
                         </div>
                         <div className='header__nav-right'>
                             <div className='header__nav-right-notify'><Notify/></div>
+                            <div className='header__nav-right-img'><Avatar src={avatar} alt='avt'/></div>
                             <div className='header__nav-right-cart'><CartMini /></div>
                         </div>
                     </div>
                 </header>
                 <Layout>
-                    <Sider collapsed={collapse} theme='light'>
+                    <Sider collapsed={collapse} theme='light' className='sider'>
                         <AppSider collapse ={collapse} />
                     </Sider>
-                    <Content className='content'><Outlet /></Content>
+                    <Content className={collapse ? 'content--collapse':'content'}><Outlet /></Content>
                 </Layout>
                 <Footer className='footer'><p>&copy; 2025 My Website</p></Footer>
             </Layout>
