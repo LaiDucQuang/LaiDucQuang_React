@@ -3,17 +3,18 @@ import "./LayoutDefault.scss";
 import Logo from "../../images/logo.png";
 import LogoFold from "../../images/logo-fold.png";
 import { SearchOutlined, MenuUnfoldOutlined } from '@ant-design/icons';
-import { useState } from 'react';
 import { Link, Outlet } from "react-router-dom";
 import CartMini from '../../components/CartMini/index.js';
 import Notify from '../../components/Notify/index.js';
 import Sider from 'antd/es/layout/Sider.js';
 import AppSider from './AppSider.jsx';
+import UseCollapse from '../../Hooks/UseCollapse.js';
 
 const { Footer,Content } = Layout;
 
 function LayoutDefault() {
-    const [collapse, setCollapse] = useState(false);
+
+    const [collapse, setCollapse] = UseCollapse(768);
     return (
         <>
             <Layout className='layout-default'>

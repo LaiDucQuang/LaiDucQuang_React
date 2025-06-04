@@ -25,7 +25,7 @@ function Product() {
             <div className="product">
                 <Row gutter={[20, 20]}>
                     {products.map((item,_) => (
-                        <Col key={item.id} xxl={6} xl={6} lg={6} md={12} sm={12} xs={24}>
+                        <Col key={item.id} xxl={6} xl={6} lg={6} md={12} sm={12} xs={12}>
                             <ProductItem item={item}/>
                         </Col>
                     ))}

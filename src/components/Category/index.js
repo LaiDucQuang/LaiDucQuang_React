@@ -20,9 +20,9 @@ function Category(){
         <>
         <div className="category">
             <Row gutter={[20,20]}>
-                {category.map((item)=>(
+                {category.map((item )=>(
                     <Col xxl={12} xl={12} lg={12} md={12} sm={24} xs={24}>
-                        <ListCategory item = {item} />
+                        <ListCategory  item = {item} />
                     </Col>
                 ))}
 

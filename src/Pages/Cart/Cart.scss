@@ -18,11 +18,6 @@
     &:hover {
       transform: translateY(-3px);
     }
-
-    @media (max-width: 768px) {
-      flex-direction: column;
-      align-items: flex-start;
-    }
   }
 
   &__thumbnail {
@@ -118,10 +113,10 @@
     }
   }
   &__empty {
-    text-align: center;
-    font-size: 100px;
+    max-width: 250px;
+    font-size: 50px;
     color: #999;
-    margin-top: 2rem;
+    margin: auto;
   }
 }
 
