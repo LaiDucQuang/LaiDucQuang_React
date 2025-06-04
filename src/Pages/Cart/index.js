@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import CartList from "./CartList";
 import "./Cart.scss";
 import { deleteAllCart } from "../../actions/cart";
+import { Col, Row } from "antd";
 
 function Cart() {
     // Lấy dữ liệu giỏ hàng 
@@ -26,7 +27,7 @@ function Cart() {
 
     return (
         <>
-            
+
             <h2>Shopping Cart</h2>
 
             {/* Nút xóa toàn bộ giỏ hàng */}
@@ -36,12 +37,16 @@ function Cart() {
                 {/* Nếu giỏ hàng có sản phẩm */}
                 {cart.length > 0 ? (
                     <>
-                        
+
                         <CartList />
-                        
-                        <div className="cart__total">
-                            Total Price: <span>{total}$</span>
-                        </div>
+
+                        <Row gutter={[20,20]}>
+                            <Col xxl={24}>
+                                <div className="cart__total">
+                                    Total Price: <span>{total}$</span>
+                                </div>
+                            </Col>
+                        </Row>
                     </>
                 ) : (
                     // Nếu giỏ hàng trống
