@@ -1,6 +1,5 @@
 .product {
 
-
   &__item {
     background: #ffffff;
     border-radius: 16px;
@@ -25,7 +24,7 @@
       border-radius: 10px;
       margin-bottom: 10px;
       transition: transform 0.3s;
-      
+
     }
 
     &-discount {
@@ -53,7 +52,7 @@
     }
 
     &-old-price {
-      
+
       color: #aaa;
       font-size: 15px;
       text-decoration: line-through;
@@ -94,8 +93,8 @@
       }
     }
 
-    
-    &-warehouse{
+
+    &-warehouse {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -105,35 +104,46 @@
 
 // responsive
 @media (max-width: 575.98px) {
-  .product__item{
+  .product__item {
     max-width: 280px;
+    min-width: 150px;
     margin: auto;
-    &-thumbnail{
+    margin-left: 10px;
+
+    &-thumbnail {
       height: 100px;
     }
-    &-title{
+
+    &-title {
       margin-bottom: -20px;
     }
-    &-stock{
+
+    &-stock {
       margin-right: 30px;
     }
-    &-old-price{
+
+    &-old-price {
       display: none;
     }
-    &-btn{
+
+    &-btn {
       padding: 7px;
     }
   }
 }
 
 @media (max-width:479.98px) {
-  .product__item{
+  .product__item {
     max-width: 230px;
-    &-title{
+    margin: auto;
+
+
+    &-title {
       font-size: 10px;
       margin-bottom: -30px;
     }
-    &-btn{
+
+    &-btn {
       font-size: 12px;
       padding: 5px;
     }
